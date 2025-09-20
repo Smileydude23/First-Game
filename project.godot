@@ -13,7 +13,12 @@ config_version=5
 config/name="First Game"
 run/main_scene="uid://bb3u7mm35n1ae"
 config/features=PackedStringArray("4.5", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Images/icon.svg"
+
+[autoload]
+
+GameController="*res://Scripts/game controller.gd"
+EventController="*res://Scripts/event controller.gd"
 
 [input]
 
