@@ -4,6 +4,12 @@ class_name Player extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+func boing():
+	velocity.y = JUMP_VELOCITY/1.5
+
+func boing_side(x):
+	velocity.y = JUMP_VELOCITY/1.5
+	velocity.x = x
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -18,7 +24,7 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
 	if direction:
-		velocity.x = direction * 250
+		velocity.x = direction * 150
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
