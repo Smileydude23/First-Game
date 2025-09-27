@@ -20,6 +20,6 @@ func _on_resume_pressed():
 	get_tree().paused = false
 
 
-func _on_main_menu_pressed() -> void:
+#func _on_main_menu_pressed() -> void:
 	pause_panel.hide()
 	get_tree().change_scene_to_file("res://Scenes/menu/main_menu.tscn")

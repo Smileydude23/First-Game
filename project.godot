@@ -19,6 +19,7 @@ config/icon="res://Images/icon.svg"
 
 GameController="*res://Scripts/game controller.gd"
 EventController="*res://Scripts/event controller.gd"
+Portal="*res://Scenes/menu/portal.gd"
 
 [input]
 

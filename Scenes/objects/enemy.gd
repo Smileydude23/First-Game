@@ -5,14 +5,14 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
+@export var value: int = 1
 
 func _on_area_2d_body_entered(body):
 	if (body.name == "Player"):
@@ -24,7 +24,7 @@ func _on_area_2d_body_entered(body):
 			body.boing()
 		else:
 			print("Decrease player health")
-			GameController.decrease_health()
+			GameController.decrease_health(value)
 			if (x_delta > 0):
 				body.boing_side(500)
 			else:
